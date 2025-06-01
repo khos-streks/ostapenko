@@ -1,8 +1,9 @@
+import clsx from 'clsx'
 import { UserIcon } from 'lucide-react'
 
-export function Header() {
+export function Header({ className }: { className?: string }) {
 	return (
-		<header className='bg-white w-full rounded-2xl shadow-2xl p-8'>
+		<header className={clsx('bg-white w-full rounded-2xl shadow-2xl p-8', className)}>
 			<div className='flex items-center gap-5'>
 				<div className='h-full aspect-square'>
 					<UserIcon className='bg-[#e0e0e0] p-4 h-24 w-24 rounded-full' />

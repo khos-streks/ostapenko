@@ -15,12 +15,13 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<Container>
-			<div className='flex gap-8 w-full'>
-				<div className='flex flex-col gap-8 w-2/3'>
-					<Header />
+			<Header className='lg:hidden mb-8' />
+			<div className='flex gap-8 w-full max-md:flex-col-reverse'>
+				<div className='flex flex-col gap-8 w-2/3 max-lg:w-1/2 max-md:w-full'>
+					<Header className='max-lg:hidden' />
 					<Portfolio />
 				</div>
-				<div className='flex flex-col gap-8 w-1/3'>
+				<div className='flex flex-col gap-8 w-1/3 max-lg:w-1/2 max-md:w-full'>
 					<Experience />
 					<Skills />
 				</div>

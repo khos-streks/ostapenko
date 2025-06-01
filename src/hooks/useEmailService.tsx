@@ -1,29 +1,22 @@
 import { emailService } from '@/services/email.service'
 import { useMutation } from '@tanstack/react-query'
+import { AxiosError } from 'axios'
+import { toast } from 'sonner'
 
-export const useContactService = () => {
+export const useContactService = ({ successCallback }: { successCallback?: () => void }) => {
 	return useMutation({
 		mutationKey: ['contact'],
-		mutationFn: async (data: {
-			companyName: string
-			email: string
-			title: string
-			message: string
-		}) => {
-			const res = (await emailService.sendContactEmail(data)).data
-			if (!res) throw new Error()
-			return res
-		}
-	})
-}
-
-export const useSendReviewService = () => {
-	return useMutation({
-		mutationKey: ['sendReview'],
-		mutationFn: async (data: { companyName: string; rating: number; message: string }) => {
-			const res = (await emailService.sendReview(data)).data
-			if (!res) throw new Error()
-			return res
+		mutationFn: async (data: { email: string; title: string; message: string }) => {
+			const res = await emailService.sendContactEmail(data)
+			if (!res?.data?.ok) throw new Error(res.data.message)
+			return res.data
+		},
+		onSuccess: () => {
+			toast.success('Email sent successfully!')
+			successCallback?.()
+		},
+		onError: (error: AxiosError<{ message: string }>) => {
+			toast.error(error.response?.data?.message)
 		}
 	})
 }

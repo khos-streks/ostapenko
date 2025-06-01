@@ -26,7 +26,7 @@ export function ImageWithSkeleton({
 			{!error && props.src ? (
 				<Image
 					className={clsx(
-						'absolute inset-0 w-full h-auto transition-opacity duration-300 object-contain',
+						'absolute inset-0 w-full h-auto transition-opacity duration-300 object-cover',
 						isLoading ? 'opacity-0' : 'opacity-100'
 					)}
 					alt={alt}

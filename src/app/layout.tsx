@@ -48,7 +48,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 					}}
 				></script>
 				<Provider>
-					<Toaster theme='dark' />
+					<Toaster style={{color: "#fff"}} />
 					<main>
 						<Background /> {children}
 					</main>
