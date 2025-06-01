@@ -20,6 +20,7 @@ export function Portfolio() {
 								containerClassName='w-full aspect-video rounded-xl'
 								className='rounded-xl'
 								fill
+								priority
 								src={item.image}
 								alt={item.title}
 							/>

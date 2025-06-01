@@ -4,7 +4,6 @@ import { Experience } from '@/components/shared/home/experience'
 import { Header } from '@/components/shared/home/header'
 import { Portfolio } from '@/components/shared/home/portfolio/portfolio'
 import { Skills } from '@/components/shared/home/skills/skills'
-import * as motion from 'framer-motion/client'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -16,26 +15,21 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<Container>
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, transition: { duration: 1 } }}
-			>
-				<Header className='lg:hidden mb-8' />
-				<div className='flex gap-8 w-full max-md:flex-col-reverse'>
-					<div className='flex flex-col gap-8 w-2/3 max-lg:w-1/2 max-md:w-full'>
-						<Header className='max-lg:hidden' />
-						<Portfolio />
-					</div>
-					<div className='flex flex-col gap-8 w-1/3 max-lg:w-1/2 max-md:w-full'>
-						<Experience
-							firstBlockClassName='max-md:order-2'
-							secondBlockClassName='max-md:order-3'
-						/>
-						<Skills className='max-md:order-1' />
-					</div>
+			<Header className='lg:hidden mb-8' />
+			<div className='flex gap-8 w-full max-md:flex-col-reverse'>
+				<div className='flex flex-col gap-8 w-2/3 max-lg:w-1/2 max-md:w-full'>
+					<Header className='max-lg:hidden' />
+					<Portfolio />
 				</div>
-				<Contacts />]
-			</motion.div>
+				<div className='flex flex-col gap-8 w-1/3 max-lg:w-1/2 max-md:w-full'>
+					<Experience
+						firstBlockClassName='max-md:order-2'
+						secondBlockClassName='max-md:order-3'
+					/>
+					<Skills className='max-md:order-1' />
+				</div>
+			</div>
+			<Contacts />
 		</Container>
 	)
 }
