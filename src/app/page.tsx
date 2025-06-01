@@ -22,8 +22,11 @@ export default function Home() {
 					<Portfolio />
 				</div>
 				<div className='flex flex-col gap-8 w-1/3 max-lg:w-1/2 max-md:w-full'>
-					<Experience />
-					<Skills />
+					<Experience
+						firstBlockClassName='max-md:order-2'
+						secondBlockClassName='max-md:order-3'
+					/>
+					<Skills className='max-md:order-1' />
 				</div>
 			</div>
 			<Contacts />

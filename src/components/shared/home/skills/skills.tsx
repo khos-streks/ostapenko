@@ -1,9 +1,10 @@
+import clsx from 'clsx'
 import { SKILLS } from './skills.data'
 
-export function Skills() {
+export function Skills({ className }: { className?: string }) {
 	return (
-		<section className='bg-white p-8 rounded-xl shadow-2xl'>
-			<h2 className='font-bold text-xl mb-6'>Hard Skills</h2>
+		<section className={clsx('bg-white p-8 rounded-xl shadow-2xl max-sm:p-4', className)}>
+			<h2 className='font-bold text-xl mb-8 max-sm:mb-4'>Hard Skills</h2>
 			<div className='flex flex-col gap-2'>
 				{SKILLS.map(skill => (
 					<div

@@ -3,22 +3,22 @@ import { UserIcon } from 'lucide-react'
 
 export function Header({ className }: { className?: string }) {
 	return (
-		<header className={clsx('bg-white w-full rounded-2xl shadow-2xl p-8', className)}>
-			<div className='flex items-center gap-5'>
+		<header className={clsx('bg-white w-full rounded-2xl shadow-2xl p-8 max-sm:p-4', className)}>
+			<div className='flex items-center gap-5 max-[420px]:gap-2 max-[420px]:flex-col'>
 				<div className='h-full aspect-square'>
-					<UserIcon className='bg-[#e0e0e0] p-4 h-24 w-24 rounded-full' />
+					<UserIcon className='bg-[#e0e0e0] p-4 h-24 w-24 max-sm:h-20 max-sm:w-20 rounded-full' />
 				</div>
 				<div className='flex flex-col'>
-					<h1 className='text-2xl'>Kostiantyn Ostapenko</h1>
+					<h1 className='text-2xl max-sm:text-xl'>Kostiantyn Ostapenko</h1>
 					<a
 						href='mailto:ostapenkokpersonal@gmail.com'
-						className='text-[#949494] hover:text-[#111] transition-colors duration-300'
+						className='text-[#949494] hover:text-[#111] transition-colors duration-300 max-sm:text-sm'
 					>
 						ostapenkokpersonal@gmail.com
 					</a>
 				</div>
 			</div>
-			<h2 className='mt-5 text-2xl font-bold tracking-wider'>Full Stack Developer</h2>
+			<h2 className='mt-5 text-2xl font-bold tracking-wider max-sm:text-xl max-sm:tracking-wide max-[420px]:text-center max-[420px]:text-base'>Full Stack Developer</h2>
 		</header>
 	)
 }

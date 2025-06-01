@@ -25,8 +25,8 @@ export function Contacts() {
 	}
 
 	return (
-		<section className='bg-white p-8 rounded-xl shadow-2xl mt-8'>
-			<h2 className='font-bold text-xl mb-6'>Contact</h2>
+		<section className='bg-white p-8 max-sm:p-4 rounded-xl shadow-2xl mt-8'>
+			<h2 className='font-bold text-xl mb-8 max-sm:mb-4'>Contact</h2>
 			<form
 				className='flex flex-col gap-4'
 				onSubmit={handleSubmit(data => sendEmail(data))}

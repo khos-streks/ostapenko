@@ -1,9 +1,19 @@
-export function Experience() {
+import clsx from 'clsx'
+
+export function Experience({
+	firstBlockClassName,
+	secondBlockClassName
+}: {
+	firstBlockClassName?: string
+	secondBlockClassName?: string
+}) {
 	return (
 		<>
-			<section className='bg-white p-8 rounded-xl shadow-2xl'>
+			<section
+				className={clsx('bg-white p-8 max-sm:p-4 rounded-xl shadow-2xl', firstBlockClassName)}
+			>
 				<h2 className='font-bold text-xl'>Commercial Experience</h2>
-				<div className='mt-8'>
+				<div className='mt-8 max-sm:mt-4'>
 					<h3 className='text-lg font-semibold'>Freelance</h3>
 					<h4>2023 - now</h4>
 					<p className='italic mt-3'>
@@ -14,9 +24,11 @@ export function Experience() {
 					</p>
 				</div>
 			</section>
-			<section className='bg-white p-8 rounded-xl shadow-2xl'>
+			<section
+				className={clsx('bg-white p-8 max-sm:p-4 rounded-xl shadow-2xl', secondBlockClassName)}
+			>
 				<h2 className='font-bold text-xl'>Non-Commercial Experience</h2>
-				<div className='mt-8'>
+				<div className='mt-8 max-sm:mt-4'>
 					<h3 className='text-lg font-semibold'>Cross-Functional Collaboration</h3>
 					<h4>2024, June - 2024, December</h4>
 					<p className='italic mt-3'>
