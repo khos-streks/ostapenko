@@ -18,7 +18,9 @@ export function Header({ className }: { className?: string }) {
 					</a>
 				</div>
 			</div>
-			<h2 className='mt-5 text-2xl font-bold tracking-wider max-sm:text-xl max-sm:tracking-wide max-[420px]:text-center max-[420px]:text-base'>Full Stack Developer</h2>
+			<h2 className='mt-5 text-2xl font-bold tracking-wider max-sm:text-xl max-sm:tracking-wide max-[420px]:text-center max-[420px]:text-base'>
+				Full Stack Developer
+			</h2>
 		</header>
 	)
 }

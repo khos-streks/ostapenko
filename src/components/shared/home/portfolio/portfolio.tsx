@@ -3,7 +3,9 @@ import { ImageWithSkeleton } from '@/components/ui/image-with-skeleton'
 
 export function Portfolio() {
 	return (
-		<section className='bg-white p-8 rounded-xl shadow-2xl max-sm:p-4'>
+		<section
+			className='bg-white p-8 rounded-xl shadow-2xl max-sm:p-4'
+		>
 			<h2 className='font-bold text-xl'>Portfolio</h2>
 			<div className='mt-8 max-sm:mt-4 grid grid-cols-2 gap-8 max-lg:grid-cols-1'>
 				{PORTFOLIO.map((item, index) => (
