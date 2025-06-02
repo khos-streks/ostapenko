@@ -20,13 +20,13 @@ export const PORTFOLIO: IPortfolioItem[] = [
 		description:
 			'Light 2U is an online store specializing in premium lighting solutions, offering a wide variety of light fixtures for both residential and commercial spaces.',
 		image: '/projects/light-2u.png',
-		link: 'https://light-2u.com.ua'
+		link: 'https://light2u.com.ua'
 	},
 	{
 		title: 'Fabriq',
 		description:
 			'Fabriq is an online store specializing in high-quality statues and sculptures, offering a wide range of art pieces for collectors, decorators, and art enthusiasts.',
-		image: '/projects/fabriq.jpg',
+		image: '/projects/fabriq.avif',
 		link: 'https://fabriq.com.pl'
 	},
 	{
