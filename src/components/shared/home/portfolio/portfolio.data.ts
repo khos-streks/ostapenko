@@ -19,7 +19,7 @@ export const PORTFOLIO: IPortfolioItem[] = [
 		title: 'Light 2U',
 		description:
 			'Light 2U is an online store specializing in premium lighting solutions, offering a wide variety of light fixtures for both residential and commercial spaces.',
-		image: '/projects/light-2u.png',
+		image: '/projects/light-2u.avif',
 		link: 'https://light2u.com.ua'
 	},
 	{
@@ -42,6 +42,41 @@ export const PORTFOLIO: IPortfolioItem[] = [
 			'Ulethai is a Thai company that provides car rental services. The site includes filters, car search, booking and much more',
 		image: '/projects/ulethai.avif',
 		link: 'https://ulethai.com'
+	},
+	{
+		title: 'Bridget Regan Blog',
+		description:
+			'Bridget Regan Blog is a unofficial blog related to the actress Bridget Regan. The site features articles, photos, and videos related to her life and career.',
+		image: '/projects/bridgetregan.avif',
+		link: 'https://bridgetregan.org/'
+	},
+	{
+		title: 'Phlebotomy Technician',
+		description:
+			'Phlebotomy Technician is a blog dedicated to the phlebotomy technician. The site features articles, photos, and videos related to the phlebotomy technician.',
+		image: '/projects/phlebotomy-technician.avif',
+		link: 'https://phlebotomy.vercel.app/'
+	},
+	{
+		title: 'ColoradoBeerNews',
+		description:
+			'Colorado Beer News has become the go-to source for everything related to craft beer in the Centennial State',
+		image: '/projects/colorado-beer-news.avif',
+		link: 'https://coloradobeernews.com/'
+	},
+	{
+		title: 'Ace Plumbing - San Francisco',
+		description:
+			'Ace Plumbing is a plumbing company that provides a wide range of services to the residents of San Francisco.',
+		image: '/projects/ace-plumbing.avif',
+		link: 'https://ace-plumbing.vercel.app/'
+	},
+	{
+		title: 'Ashley Loves Books',
+		description:
+			'Ashley Loves Books is a blog dedicated to the books. The site features articles, photos and information about the books.',
+		image: '/projects/ashleylovesbooks.avif',
+		link: 'https://ashleylovesbooks.com/'
 	},
 	{
 		title: 'My IQ Rank',

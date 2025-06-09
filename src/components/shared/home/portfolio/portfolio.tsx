@@ -2,6 +2,7 @@ import { PORTFOLIO } from './portfolio.data'
 import { ImageWithSkeleton } from '@/components/ui/image-with-skeleton'
 
 export function Portfolio() {
+	console.log("Projects total:", PORTFOLIO.length)
 	return (
 		<section
 			className='bg-white p-8 rounded-xl shadow-2xl max-sm:p-4'
