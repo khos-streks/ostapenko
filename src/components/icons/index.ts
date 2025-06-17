@@ -1,6 +1,5 @@
 export { ExpressIcon } from '@/components/icons/express-icon'
 export { GitIcon } from '@/components/icons/git-icon'
-export { GithubIcon } from '@/components/icons/github-icon'
 export { JavascriptIcon } from '@/components/icons/javascript-icon'
 export { NestjsIcon } from '@/components/icons/nestjs-icon'
 export { NextjsIcon } from '@/components/icons/nextjs-icon'

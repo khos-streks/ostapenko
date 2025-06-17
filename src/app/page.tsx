@@ -1,4 +1,5 @@
 import Container from '@/components/layout/container'
+import { Awards } from '@/components/shared/home/awards'
 import { Contacts } from '@/components/shared/home/contacts'
 import { Experience } from '@/components/shared/home/experience'
 import { Header } from '@/components/shared/home/header'
@@ -26,10 +27,11 @@ export default function Home() {
 						firstBlockClassName='max-md:order-2'
 						secondBlockClassName='max-md:order-3'
 					/>
+					<Awards className='max-md:order-5' />
 					<Skills className='max-md:order-1' />
 				</div>
 			</div>
-			<Contacts />
+			<Contacts className='max-md:order-4' />
 		</Container>
 	)
 }

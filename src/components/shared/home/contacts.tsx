@@ -11,7 +11,7 @@ interface Form {
 	message: string
 }
 
-export function Contacts() {
+export function Contacts({ className }: { className?: string }) {
 	const { register, handleSubmit, formState, reset } = useForm<Form>()
 	const { errors } = formState
 	const { mutateAsync, isPending } = useContactService({
@@ -25,7 +25,7 @@ export function Contacts() {
 	}
 
 	return (
-		<section className='bg-white p-8 max-sm:p-4 rounded-xl shadow-2xl mt-8'>
+		<section className={clsx('bg-white p-8 max-sm:p-4 rounded-xl shadow-2xl mt-8', className)}>
 			<h2 className='font-bold text-xl mb-8 max-sm:mb-4'>Contact</h2>
 			<form
 				className='flex flex-col gap-4'

@@ -1,7 +1,6 @@
 import {
 	ExpressIcon,
 	GitIcon,
-	GithubIcon,
 	JavascriptIcon,
 	NestjsIcon,
 	NextjsIcon,
@@ -53,9 +52,5 @@ export const SKILLS: ISkill[] = [
 	{
 		name: 'Git',
 		icon: GitIcon
-	},
-	{
-		name: 'GitHub',
-		icon: GithubIcon
 	}
 ]

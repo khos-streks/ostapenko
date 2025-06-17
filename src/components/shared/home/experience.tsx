@@ -9,6 +9,24 @@ export function Experience({
 }) {
 	return (
 		<>
+			<section className='bg-white p-8 max-sm:p-4 rounded-xl shadow-2xl'>
+				<h2 className='font-bold text-xl'>Events & Achievements</h2>
+				<div className='mt-8 max-sm:mt-4'>
+					<h3 className='text-lg font-semibold'>Nationwide Hackaton</h3>
+					<p className='italic mt-3'>
+						🥈 Built an award-winning app with AI integration on the nationwide hackathon:{' '}
+						<b>"Українська IT-Сотня"</b>
+					</p>
+				</div>
+
+				<div className='mt-6 max-sm:mt-4'>
+					<h3 className='text-lg font-semibold'>Education Grant</h3>
+					<p className='italic mt-3'>
+						Won an educational grant worth <b>₴400,000</b> to further develop technical skills and
+						knowledge.
+					</p>
+				</div>
+			</section>
 			<section
 				className={clsx('bg-white p-8 max-sm:p-4 rounded-xl shadow-2xl', firstBlockClassName)}
 			>
@@ -24,6 +42,7 @@ export function Experience({
 					</p>
 				</div>
 			</section>
+
 			<section
 				className={clsx('bg-white p-8 max-sm:p-4 rounded-xl shadow-2xl', secondBlockClassName)}
 			>

@@ -3,4 +3,5 @@ export interface IPortfolioItem {
 	title: string
 	description: string
 	link: string
+	highlighted?: boolean
 }

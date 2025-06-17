@@ -2,6 +2,14 @@ import { IPortfolioItem } from './portfolio.types'
 
 export const PORTFOLIO: IPortfolioItem[] = [
 	{
+		title: 'UAre Connected',
+		description:
+			'UAre Connected is an award-winning app that allows users to connect with each other and find new friends. AI-powered matching system. Developed in 12 hours on nationwide hackathon: "Українська IT-Сотня".',
+		image: '/projects/uare-connected.avif',
+		link: 'https://uare-connected.vercel.app/',
+		highlighted: true
+	},
+	{
 		title: 'Charm AI',
 		description:
 			'Charm AI is a SaaS application designed to generate responses for chat conversations, including AI-driven pickup lines and conversation starters.',
@@ -44,13 +52,6 @@ export const PORTFOLIO: IPortfolioItem[] = [
 		link: 'https://ulethai.com'
 	},
 	{
-		title: 'Bridget Regan Blog',
-		description:
-			'Bridget Regan Blog is a unofficial blog related to the actress Bridget Regan. The site features articles, photos, and videos related to her life and career.',
-		image: '/projects/bridgetregan.avif',
-		link: 'https://bridgetregan.org/'
-	},
-	{
 		title: 'Phlebotomy Technician',
 		description:
 			'Phlebotomy Technician is a blog dedicated to the phlebotomy technician. The site features articles, photos, and videos related to the phlebotomy technician.',
@@ -84,33 +85,5 @@ export const PORTFOLIO: IPortfolioItem[] = [
 			'My IQ Rank is an online platform dedicated to providing IQ testing services. The website offers users the opportunity to take scientifically designed IQ tests to measure their cognitive abilities.',
 		image: '/projects/my-iq-rank.jpg',
 		link: 'https://myiqrank.com'
-	},
-	{
-		title: 'Img2code',
-		description:
-			'❗ WARNING: Backend is currently off ❗ Img2Code is a tool that extracts code from images containing code snippets. By using optical character recognition (OCR), it converts text-based code in images into editable, formatted code in various programming languages.',
-		image: '/projects/img2code.avif',
-		link: 'https://img2code.xyz'
-	},
-	{
-		title: 'Next Movie',
-		description:
-			'❗ WARNING: Backend is currently off ❗ A web app for browsing movies, checking showtimes, and booking cinema tickets online. Includes real-time seat selection and a clean, responsive interface.',
-		image: '/projects/next-movie.avif',
-		link: 'https://thenextmovie.com'
-	},
-	{
-		title: 'Weather Guru',
-		description:
-			'Weather Guru is a simple online tool that provides weather information for different regions. Developed in my spare time to test Styled Components technology',
-		image: '/projects/weather-guru.avif',
-		link: 'https://weather-guru.vercel.app'
-	},
-	{
-		title: 'Justy News',
-		description:
-			'Justy news is a simple online site that contains news in various categories. Developed in my spare time to practice RTK Query.',
-		image: '/projects/justy-news.avif',
-		link: 'https://weather-guru.vercel.app'
 	}
 ]
