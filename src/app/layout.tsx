@@ -21,16 +21,6 @@ export const viewport = {
 	themeColor: '#000000'
 }
 
-export const links = [
-	{
-		rel: 'preload',
-		href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap',
-		as: 'style',
-		crossOrigin: 'anonymous',
-		type: 'text/css'
-	}
-]
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang='en'>
