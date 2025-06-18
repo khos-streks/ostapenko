@@ -29,9 +29,9 @@ export default function Home() {
 					/>
 					<Awards className='max-md:order-5' />
 					<Skills className='max-md:order-1' />
+					<Contacts className='max-md:order-4' />
 				</div>
 			</div>
-			<Contacts className='max-md:order-4' />
 		</Container>
 	)
 }
