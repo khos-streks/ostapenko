@@ -50,7 +50,6 @@ export function Awards({ className }: { className?: string }) {
 								</div>
 								<div>
 									<h3 className='font-semibold'>{award.title}</h3>
-									<p className='text-sm text-[#949494]'>{award.description}</p>
 									{(award.date || award.issuer) && (
 										<p className='text-xs text-[#949494] mt-1'>
 											{award.date && <span>{award.date}</span>}

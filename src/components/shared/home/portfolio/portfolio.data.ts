@@ -1,13 +1,18 @@
+import { toast } from 'sonner'
 import { IPortfolioItem } from './portfolio.types'
 
 export const PORTFOLIO: IPortfolioItem[] = [
 	{
-		title: 'UAre Connected',
+		title: 'MHP Logistics Budgeting',
 		description:
-			'UAre Connected is an award-winning app that allows users to connect with each other and find new friends. AI-powered matching system. Developed in 12 hours on nationwide hackathon: "Українська IT-Сотня".',
-		image: '/projects/uare-connected.avif',
-		link: 'https://uare-connected.vercel.app/',
-		highlighted: true
+			'<span style="color: #ff0000;">Private project. Demo available upon request (non-public, NDA-protected).</span> Built a high-impact single-screen budgeting dashboard for MHP Logistics, featuring AI-assisted insights, variance analysis, pivot tables, and real-time financial summaries.',
+		image: '/projects/budgeting.png',
+		highlighted: true,
+		onClick: () => {
+			toast.error('Private project. Demo available upon request (non-public, NDA-protected).', {
+				position: 'top-center'
+			})
+		}
 	},
 	{
 		title: 'Charm AI',
@@ -31,6 +36,13 @@ export const PORTFOLIO: IPortfolioItem[] = [
 		link: 'https://light2u.com.ua'
 	},
 	{
+		title: 'UAre Connected',
+		description:
+			'UAre Connected is an award-winning app that allows users to connect with each other and find new friends. AI-powered matching system. Developed in 12 hours on nationwide hackathon: "Українська IT-Сотня".',
+		image: '/projects/uare-connected.avif',
+		link: 'https://uare-connected.vercel.app/'
+	},
+	{
 		title: 'Fabriq',
 		description:
 			'Fabriq is an online store specializing in high-quality statues and sculptures, offering a wide range of art pieces for collectors, decorators, and art enthusiasts.',
@@ -50,34 +62,6 @@ export const PORTFOLIO: IPortfolioItem[] = [
 			'Ulethai is a Thai company that provides car rental services. The site includes filters, car search, booking and much more',
 		image: '/projects/ulethai.avif',
 		link: 'https://ulethai.com'
-	},
-	{
-		title: 'Phlebotomy Technician',
-		description:
-			'Phlebotomy Technician is a blog dedicated to the phlebotomy technician. The site features articles, photos, and videos related to the phlebotomy technician.',
-		image: '/projects/phlebotomy-technician.avif',
-		link: 'https://phlebotomy.vercel.app/'
-	},
-	{
-		title: 'ColoradoBeerNews',
-		description:
-			'Colorado Beer News has become the go-to source for everything related to craft beer in the Centennial State',
-		image: '/projects/colorado-beer-news.avif',
-		link: 'https://coloradobeernews.com/'
-	},
-	{
-		title: 'Ace Plumbing - San Francisco',
-		description:
-			'Ace Plumbing is a plumbing company that provides a wide range of services to the residents of San Francisco.',
-		image: '/projects/ace-plumbing.avif',
-		link: 'https://ace-plumbing.vercel.app/'
-	},
-	{
-		title: 'Ashley Loves Books',
-		description:
-			'Ashley Loves Books is a blog dedicated to the books. The site features articles, photos and information about the books.',
-		image: '/projects/ashleylovesbooks.avif',
-		link: 'https://ashleylovesbooks.com/'
 	},
 	{
 		title: 'My IQ Rank',

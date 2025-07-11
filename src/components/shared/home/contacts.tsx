@@ -91,7 +91,7 @@ export function Contacts({ className }: { className?: string }) {
 						id='contacts-message'
 						placeholder='Your message here...'
 						className={clsx(
-							'border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-neutral-700 transition-all',
+							'border p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-neutral-700 transition-all min-h-[150px] resize-none',
 							{
 								'!border-red-500': errors.message
 							}

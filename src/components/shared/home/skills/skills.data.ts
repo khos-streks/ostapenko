@@ -11,6 +11,7 @@ import {
 	TypeScriptIcon
 } from '@/components/icons'
 import { ISkill } from './skills.types'
+import { AwsIcon } from '@/components/icons/aws-icon'
 
 export const SKILLS: ISkill[] = [
 	{
@@ -52,5 +53,9 @@ export const SKILLS: ISkill[] = [
 	{
 		name: 'Git',
 		icon: GitIcon
+	},
+	{
+		name: 'AWS Integration',
+		icon: AwsIcon
 	}
 ]
