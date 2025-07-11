@@ -4,10 +4,10 @@ export const PORTFOLIO: IPortfolioItem[] = [
 	{
 		title: 'MHP Logistics Budgeting',
 		description:
-			'<span style="color: #ff0000;">Private project. Demo available upon request (non-public, NDA-protected).</span> Built a high-impact single-screen budgeting dashboard for MHP Logistics, featuring AI-assisted insights, variance analysis, pivot tables, and real-time financial summaries.',
+			'<span style="color: #ff0000;">Private project. Demo available upon request.</span> Built a high-impact single-screen budgeting dashboard for MHP Logistics, featuring AI-assisted insights, variance analysis, pivot tables, and real-time financial summaries.',
 		image: '/projects/budgeting.avif',
 		highlighted: true,
-		clickMessage: 'Private project. Demo available upon request (non-public, NDA-protected).'
+		clickMessage: 'Private project. Demo available upon request.'
 	},
 	{
 		title: 'Charm AI',
