@@ -18,14 +18,14 @@ export const PORTFOLIO: IPortfolioItem[] = [
 		title: 'Charm AI',
 		description:
 			'Charm AI is a SaaS application designed to generate responses for chat conversations, including AI-driven pickup lines and conversation starters.',
-		image: '/projects/charm-ai.jpg',
+		image: '/projects/charm-ai.avif',
 		link: 'https://charm-ai.io'
 	},
 	{
 		title: 'Lumineka',
 		description:
 			'Lumineka is an online store specializing in a wide range of high-quality lighting products.',
-		image: '/projects/lumineka.jpg',
+		image: '/projects/lumineka.avif',
 		link: 'https://lumineka.com.ua'
 	},
 	{
@@ -53,7 +53,7 @@ export const PORTFOLIO: IPortfolioItem[] = [
 		title: 'Bluetongue',
 		description:
 			'Bluetongue is a SaaS platform designed to provide a seamless and interactive experience for reading digital books.',
-		image: '/projects/bluetongue.jpg',
+		image: '/projects/bluetongue.avif',
 		link: 'https://bluetongue.com.ua'
 	},
 	{
@@ -67,7 +67,7 @@ export const PORTFOLIO: IPortfolioItem[] = [
 		title: 'My IQ Rank',
 		description:
 			'My IQ Rank is an online platform dedicated to providing IQ testing services. The website offers users the opportunity to take scientifically designed IQ tests to measure their cognitive abilities.',
-		image: '/projects/my-iq-rank.jpg',
+		image: '/projects/my-iq-rank.avif',
 		link: 'https://myiqrank.com'
 	}
 ]

@@ -1,7 +1,6 @@
-'use client'
-
 import { ImageWithSkeleton } from '@/components/ui/image-with-skeleton'
 import { PORTFOLIO } from './portfolio.data'
+import { AdaptiveLink } from '../../adaptive-link'
 
 export function Portfolio() {
 	console.log('Projects total:', PORTFOLIO.length)
@@ -10,11 +9,10 @@ export function Portfolio() {
 			<h2 className='font-bold text-xl'>Commercial projects</h2>
 			<div className='mt-8 max-sm:mt-4 grid grid-cols-2 gap-8 max-lg:grid-cols-1'>
 				{PORTFOLIO.map((item, index) => (
-					<a
+					<AdaptiveLink
 						key={index}
 						href={item.link || '#'}
 						className='contents'
-						target={item.link?.length ? '_blank' : undefined}
 						onClick={item.onClick}
 					>
 						<article
@@ -42,7 +40,7 @@ export function Portfolio() {
 								dangerouslySetInnerHTML={{ __html: item.description }}
 							/>
 						</article>
-					</a>
+					</AdaptiveLink>
 				))}
 			</div>
 		</section>
