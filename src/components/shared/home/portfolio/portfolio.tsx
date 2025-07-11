@@ -11,9 +11,9 @@ export function Portfolio() {
 				{PORTFOLIO.map((item, index) => (
 					<AdaptiveLink
 						key={index}
-						href={item.link || '#'}
+						href={item.link}
 						className='contents'
-						onClick={item.onClick}
+						clickMessage={item.clickMessage}
 					>
 						<article
 							className={`w-full flex items-center flex-col p-5 border rounded-xl shadow-lg gap-3 bg-neutral-50 hover:bg-neutral-100 hover:scale-[1.03] transition-all duration-300 cursor-pointer ${

@@ -3,6 +3,6 @@ export interface IPortfolioItem {
 	title: string
 	description: string
 	link?: string
-	onClick?: () => void
+	clickMessage?: string
 	highlighted?: boolean
 }

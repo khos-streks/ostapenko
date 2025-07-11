@@ -1,4 +1,3 @@
-import { toast } from 'sonner'
 import { IPortfolioItem } from './portfolio.types'
 
 export const PORTFOLIO: IPortfolioItem[] = [
@@ -8,11 +7,7 @@ export const PORTFOLIO: IPortfolioItem[] = [
 			'<span style="color: #ff0000;">Private project. Demo available upon request (non-public, NDA-protected).</span> Built a high-impact single-screen budgeting dashboard for MHP Logistics, featuring AI-assisted insights, variance analysis, pivot tables, and real-time financial summaries.',
 		image: '/projects/budgeting.png',
 		highlighted: true,
-		onClick: () => {
-			toast.error('Private project. Demo available upon request (non-public, NDA-protected).', {
-				position: 'top-center'
-			})
-		}
+		clickMessage: 'Private project. Demo available upon request (non-public, NDA-protected).'
 	},
 	{
 		title: 'Charm AI',
