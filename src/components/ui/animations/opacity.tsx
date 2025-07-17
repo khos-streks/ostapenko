@@ -1,3 +1,5 @@
+'use client'
+
 import { div as MotionDiv } from 'motion/react-m'
 import { PropsWithChildren } from 'react'
 
