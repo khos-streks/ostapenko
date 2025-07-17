@@ -6,6 +6,7 @@ import { Header } from '@/components/shared/home/header'
 import { Portfolio } from '@/components/shared/home/portfolio/portfolio'
 import { Skills } from '@/components/shared/home/skills/skills'
 import { Metadata } from 'next'
+import * as m from 'motion/react-m'
 
 export const metadata: Metadata = {
 	title: 'Ostapenko Kostiantyn',
@@ -15,23 +16,30 @@ export const metadata: Metadata = {
 
 export default function Home() {
 	return (
-		<Container>
-			<Header className='lg:hidden mb-8' />
-			<div className='flex gap-8 w-full max-md:flex-col-reverse'>
-				<div className='flex flex-col gap-8 w-2/3 max-lg:w-1/2 max-md:w-full'>
-					<Header className='max-lg:hidden' />
-					<Portfolio />
+		<m.div
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1 }}
+			exit={{ opacity: 0 }}
+		>
+			<Container>
+				<Header className='lg:hidden mb-8' />
+				<div className='flex gap-8 w-full max-md:flex-col-reverse'>
+					<div className='flex flex-col gap-8 w-2/3 max-lg:w-1/2 max-md:w-full'>
+						<Header className='max-lg:hidden' />
+						<Portfolio />
+					</div>
+					<div className='flex flex-col gap-8 w-1/3 max-lg:w-1/2 max-md:w-full'>
+						<Experience
+							firstBlockClassName='max-md:order-2'
+							secondBlockClassName='max-md:order-3'
+						/>
+						<Awards className='max-md:order-5' />
+						<Skills className='max-md:order-1' />
+					</div>
 				</div>
-				<div className='flex flex-col gap-8 w-1/3 max-lg:w-1/2 max-md:w-full'>
-					<Experience
-						firstBlockClassName='max-md:order-2'
-						secondBlockClassName='max-md:order-3'
-					/>
-					<Awards className='max-md:order-5' />
-					<Skills className='max-md:order-1' />
-				</div>
-			</div>
-			<Contacts className='max-md:order-4' />
-		</Container>
+				<Contacts className='max-md:order-4' />
+			</Container>
+		</m.div>
 	)
 }
