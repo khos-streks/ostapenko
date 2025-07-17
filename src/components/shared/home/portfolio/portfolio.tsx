@@ -1,5 +1,4 @@
 import { ImageWithSkeleton } from '@/components/ui/image-with-skeleton'
-import * as m from 'motion/react-m'
 import { AdaptiveLink } from '../../adaptive-link'
 import { PORTFOLIO } from './portfolio.data'
 
@@ -18,7 +17,7 @@ export function Portfolio() {
 						className='contents'
 						clickMessage={item.clickMessage}
 					>
-						<m.article
+						<article
 							className={`w-full flex items-center flex-col p-5 border rounded-xl shadow-lg gap-3 bg-neutral-50 hover:bg-neutral-100 transition-all duration-300 cursor-pointer ${
 								item.highlighted ? 'border-amber-500 border-2 relative' : ''
 							}`}
@@ -44,7 +43,7 @@ export function Portfolio() {
 								className='text-sm text-center'
 								dangerouslySetInnerHTML={{ __html: item.description }}
 							/>
-						</m.article>
+						</article>
 					</AdaptiveLink>
 				))}
 			</div>
