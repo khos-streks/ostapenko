@@ -6,7 +6,7 @@ import { Header } from '@/components/shared/home/header'
 import { Portfolio } from '@/components/shared/home/portfolio/portfolio'
 import { Skills } from '@/components/shared/home/skills/skills'
 import { Metadata } from 'next'
-import * as m from 'motion/react-m'
+import OpacityAnimation from '@/components/ui/animations/opacity'
 
 export const metadata: Metadata = {
 	title: 'Ostapenko Kostiantyn',
@@ -16,12 +16,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
 	return (
-		<m.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			transition={{ duration: 1 }}
-			exit={{ opacity: 0 }}
-		>
+		<OpacityAnimation>
 			<Container>
 				<Header className='lg:hidden mb-8' />
 				<div className='flex gap-8 w-full max-md:flex-col-reverse'>
@@ -40,6 +35,6 @@ export default function Home() {
 				</div>
 				<Contacts className='max-md:order-4' />
 			</Container>
-		</m.div>
+		</OpacityAnimation>
 	)
 }
