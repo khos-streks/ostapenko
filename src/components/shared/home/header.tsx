@@ -7,10 +7,10 @@ export function Header({ className }: { className?: string }) {
 				<div className='flex flex-col'>
 					<h1 className='text-2xl max-sm:text-xl'>Kostiantyn Ostapenko</h1>
 					<a
-						href='mailto:ostapenkokpersonal@gmail.com'
+						href='mailto:kostiantyn@ostapenko.pp.ua'
 						className='text-[#949494] hover:text-[#111] transition-colors duration-300 max-sm:text-sm'
 					>
-						ostapenkokpersonal@gmail.com
+						kostiantyn@ostapenko.pp.ua
 					</a>
 				</div>
 			</div>
