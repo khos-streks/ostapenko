@@ -1,13 +1,12 @@
 import { ImageWithSkeleton } from '@/components/ui/image-with-skeleton'
 import { AdaptiveLink } from '../../adaptive-link'
 import { PORTFOLIO } from './portfolio.data'
+import clsx from 'clsx'
 
-export function Portfolio() {
+export function Portfolio({ className }: { className?: string }) {
 	console.log('Projects total:', PORTFOLIO.length)
 	return (
-		<section
-			className='bg-white p-8 rounded-xl shadow-2xl max-sm:p-4'
-		>
+		<section className={clsx('bg-white p-8 rounded-xl shadow-2xl max-sm:p-4', className)}>
 			<h2 className='font-bold text-xl'>Commercial projects</h2>
 			<div className='mt-8 max-sm:mt-4 grid grid-cols-2 gap-8 max-lg:grid-cols-1'>
 				{PORTFOLIO.map((item, index) => (
@@ -18,7 +17,7 @@ export function Portfolio() {
 						clickMessage={item.clickMessage}
 					>
 						<article
-							className={`w-full flex items-center flex-col p-5 border rounded-xl shadow-lg gap-3 bg-neutral-50 hover:bg-neutral-100 transition-all duration-300 cursor-pointer ${
+							className={`w-full flex items-center flex-col p-5 border rounded-xl shadow-lg gap-3 bg-neutral-50 hover:bg-neutral-100 transition-all duration-200 cursor-pointer hover:scale-105 hover:-translate-y-5 ${
 								item.highlighted ? 'border-amber-500 border-2 relative' : ''
 							}`}
 						>

@@ -6,7 +6,6 @@ export const PORTFOLIO: IPortfolioItem[] = [
 		description:
 			'<span style="color: #ff0000;">Private project. Demo available upon request.</span> Built a high-impact single-screen budgeting dashboard for MHP Logistics, featuring AI-assisted insights, variance analysis, pivot tables, and real-time financial summaries.',
 		image: '/projects/budgeting.avif',
-		highlighted: true,
 		clickMessage: 'Private project. Demo available upon request.'
 	},
 	{

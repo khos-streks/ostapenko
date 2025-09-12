@@ -7,6 +7,7 @@ import { Portfolio } from '@/components/shared/home/portfolio/portfolio'
 import { Skills } from '@/components/shared/home/skills/skills'
 import { Metadata } from 'next'
 import OpacityAnimation from '@/components/ui/animations/opacity'
+import { Blockquote } from '@/components/ui/blockquote'
 
 export const metadata: Metadata = {
 	title: 'Ostapenko Kostiantyn',
@@ -18,22 +19,19 @@ export default function Home() {
 	return (
 		<OpacityAnimation>
 			<Container>
-				<Header className='lg:hidden mb-8' />
-				<div className='flex gap-8 w-full max-md:flex-col-reverse'>
-					<div className='flex flex-col gap-8 w-2/3 max-lg:w-1/2 max-md:w-full'>
-						<Header className='max-lg:hidden' />
-						<Portfolio />
+				<div className='flex gap-8 w-full max-md:flex-col'>
+					<div className='flex flex-col gap-8 w-2/3 max-md:contents max-lg:w-1/2'>
+						<Header />
+						<Blockquote>If I developed something, it’s obviously worth using.</Blockquote>
+						<Portfolio className='max-md:order-5' />
+						<Contacts className='max-md:order-6' />
 					</div>
-					<div className='flex flex-col gap-8 w-1/3 max-lg:w-1/2 max-md:w-full'>
-						<Experience
-							firstBlockClassName='max-md:order-2'
-							secondBlockClassName='max-md:order-3'
-						/>
-						<Awards className='max-md:order-5' />
-						<Skills className='max-md:order-1' />
+					<div className='flex flex-col gap-8 w-1/3 max-md:contents max-lg:w-1/2'>
+						<Experience />
+						<Awards />
+						<Skills />
 					</div>
 				</div>
-				<Contacts className='max-md:order-4' />
 			</Container>
 		</OpacityAnimation>
 	)
