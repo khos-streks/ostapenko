@@ -17,7 +17,7 @@ export function Portfolio({ className }: { className?: string }) {
 						clickMessage={item.clickMessage}
 					>
 						<article
-							className={`w-full flex items-center flex-col p-5 border rounded-xl shadow-lg gap-3 bg-neutral-50 hover:bg-neutral-100 transition-all duration-200 cursor-pointer hover:scale-105 hover:-translate-y-5 ${
+							className={`w-full flex items-center flex-col p-5 border rounded-xl shadow-lg gap-3 bg-neutral-50 hover:bg-neutral-100 transition-all duration-200 cursor-pointer hover:scale-[1.01] hover:-translate-y-1 ${
 								item.highlighted ? 'border-amber-500 border-2 relative' : ''
 							}`}
 						>
@@ -39,7 +39,7 @@ export function Portfolio({ className }: { className?: string }) {
 							</div>
 							<h3 className='text-center font-semibold text-lg'>{item.title}</h3>
 							<p
-								className='text-sm text-center'
+								className='text-sm text-justify'
 								dangerouslySetInnerHTML={{ __html: item.description }}
 							/>
 						</article>

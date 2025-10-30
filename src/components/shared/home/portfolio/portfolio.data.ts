@@ -2,6 +2,13 @@ import { IPortfolioItem } from './portfolio.types'
 
 export const PORTFOLIO: IPortfolioItem[] = [
 	{
+		title: 'Easylim',
+		link: 'https://easylim.com',
+		description:
+			'Easylim Website — an informational website for a large-scale SaaS project management platform. The site features a modern, fast, and fully responsive frontend with well-structured architecture, SEO optimization, and multilingual support.',
+		image: '/projects/easylim.avif'
+	},
+	{
 		title: 'MHP Logistics Budgeting',
 		description:
 			'<span style="color: #ff0000;">Private project. Demo available upon request.</span> Built a high-impact single-screen budgeting dashboard for MHP Logistics, featuring AI-assisted insights, variance analysis, pivot tables, and real-time financial summaries.',
