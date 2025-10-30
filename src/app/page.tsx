@@ -22,7 +22,6 @@ export default function Home() {
 				<div className='flex gap-8 w-full max-md:flex-col'>
 					<div className='flex flex-col gap-8 w-2/3 max-md:contents max-lg:w-1/2'>
 						<Header />
-						<Blockquote>If I developed something, it’s obviously worth using.</Blockquote>
 						<Portfolio className='max-md:order-5' />
 						<Contacts className='max-md:order-6' />
 					</div>
