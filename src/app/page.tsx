@@ -7,7 +7,6 @@ import { Portfolio } from '@/components/shared/home/portfolio/portfolio'
 import { Skills } from '@/components/shared/home/skills/skills'
 import { Metadata } from 'next'
 import OpacityAnimation from '@/components/ui/animations/opacity'
-import { Blockquote } from '@/components/ui/blockquote'
 
 export const metadata: Metadata = {
 	title: 'Ostapenko Kostiantyn',
