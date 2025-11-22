@@ -1,8 +1,10 @@
 import { Button } from '@/components/ui/button'
-import FloatingLines from '../../ui/floating-lines'
+import FloatingLines from '../../ui/particles'
 import { Container } from '../container'
 import { Typewriter } from 'nextjs-simple-typewriter'
 import { ArrowDownIcon } from 'lucide-react'
+import ColorBends from '../../ui/particles'
+import Particles from '../../ui/particles'
 
 export function Hero() {
 	return (
@@ -40,7 +42,7 @@ export function Hero() {
 				</div>
 			</div>
 			<div className='absolute w-full h-full inset-0'>
-				<FloatingLines
+				{/* <FloatingLines
 					enabledWaves={['top', 'middle', 'bottom']}
 					lineCount={3}
 					lineDistance={50}
@@ -48,6 +50,30 @@ export function Hero() {
 					bendStrength={-0.1}
 					interactive
 					parallax
+				/>
+				 */}
+				{/* <ColorBends
+					colors={['#ff5c7a', '#8a5cff', '#00ffd1']}
+					rotation={30}
+					speed={0.3}
+					scale={0.7}
+					frequency={2}
+					warpStrength={1.2}
+					mouseInfluence={0.1}
+					parallax={0.6}
+					noise={0.5}
+					transparent
+				/>
+				 */}
+				<Particles
+					particleColors={['#ffffff', '#ffffff']}
+					particleCount={150}
+					particleSpread={10}
+					speed={0.05}
+					particleBaseSize={100}
+					sizeRandomness={3}
+					alphaParticles={false}
+					disableRotation={false}
 				/>
 			</div>
 		</section>
