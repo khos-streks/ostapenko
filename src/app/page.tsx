@@ -1,12 +1,4 @@
-import Container from '@/components/layout/container'
-import { Awards } from '@/components/shared/home/awards'
-import { Contacts } from '@/components/shared/home/contacts'
-import { Experience } from '@/components/shared/home/experience'
-import { Header } from '@/components/shared/home/header'
-import { Portfolio } from '@/components/shared/home/portfolio/portfolio'
-import { Skills } from '@/components/shared/home/skills/skills'
 import { Metadata } from 'next'
-import OpacityAnimation from '@/components/ui/animations/opacity'
 
 export const metadata: Metadata = {
 	title: 'Ostapenko Kostiantyn',
@@ -15,22 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-	return (
-		<OpacityAnimation>
-			<Container>
-				<div className='flex gap-8 w-full max-md:flex-col'>
-					<div className='flex flex-col gap-8 w-2/3 max-md:contents max-lg:w-1/2'>
-						<Header />
-						<Portfolio className='max-md:order-5' />
-						<Contacts className='max-md:order-6' />
-					</div>
-					<div className='flex flex-col gap-8 w-1/3 max-md:contents max-lg:w-1/2'>
-						<Experience />
-						<Awards />
-						<Skills />
-					</div>
-				</div>
-			</Container>
-		</OpacityAnimation>
-	)
+	return <></>
 }

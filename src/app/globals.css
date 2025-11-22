@@ -11,10 +11,6 @@
 	scroll-behavior: smooth;
 }
 
-body {
-	@apply text-foreground bg-bg;
-}
-
 .no-scrollbar {
 	-ms-overflow-style: none;
 	scrollbar-width: none;

@@ -1,10 +1,8 @@
-import { Background } from '@/components/ui/background/background'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import { Toaster } from 'sonner'
 import './globals.css'
 import Provider from './provider'
-import { Preloader } from './preloader'
 
 const montserrat = Montserrat({
 	variable: '--font-geist-sans',
@@ -27,11 +25,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 		<html lang='en'>
 			<body className={montserrat.className}>
 				<Provider>
-					<Preloader />
 					<Toaster style={{ color: '#fff' }} />
-					<main>
-						<Background /> {children}
-					</main>
+					<main>{children}</main>
 				</Provider>
 			</body>
 		</html>
