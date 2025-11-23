@@ -1,7 +1,27 @@
 export const HEADER_MENU = [
-	{ title: 'Services', href: '/#services' },
-	{ title: 'Portfolio', href: '/#portfolio' },
-	{ title: 'Advantages', href: '/#advantages' },
-	{ title: 'Tech Stack', href: '/#stack' },
-	{ title: 'Contact', href: '/#contact' }
+	{
+		label: 'Services',
+		ariaLabel: 'Services',
+		link: '/#services'
+	},
+	{
+		label: 'Portfolio',
+		ariaLabel: 'Portfolio',
+		link: '/#portfolio'
+	},
+	{
+		label: 'Advantages',
+		ariaLabel: 'Advantages',
+		link: '/#advantages'
+	},
+	{
+		label: 'Tech Stack',
+		ariaLabel: 'Tech Stack',
+		link: '/#stack'
+	},
+	{
+		label: 'Contact',
+		ariaLabel: 'Contact',
+		link: '/#contact'
+	}
 ]

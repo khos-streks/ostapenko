@@ -1,13 +1,13 @@
 import { Header } from '@/components/shared/header/header'
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Manrope } from 'next/font/google'
 import { Toaster } from 'sonner'
 import './globals.css'
 import Provider from './provider'
 
-const montserrat = Montserrat({
-	variable: '--font-geist-sans',
-	subsets: ['latin', 'cyrillic'],
+const manrope = Manrope({
+	variable: '--font-manrope',
+	subsets: ['latin'],
 	display: 'swap'
 })
 
@@ -24,7 +24,7 @@ export const viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang='en'>
-			<body className={montserrat.className}>
+			<body className={manrope.className}>
 				<Provider>
 					<Toaster style={{ color: '#fff' }} />
 					<Header />

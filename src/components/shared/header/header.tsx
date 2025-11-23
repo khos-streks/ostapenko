@@ -1,45 +1,34 @@
-import clsx from 'clsx'
-import { ReactNode } from 'react'
+import Image from 'next/image'
 import { Container } from '../container'
-import { MenuIcon } from 'lucide-react'
-import { Dialog } from '@/components/ui/dialog'
 import { HeaderMenu } from './header-menu'
-
-function HeaderSection({ children, className }: { children?: ReactNode; className?: string }) {
-	return (
-		<div
-			className={clsx(
-				'bg-black/50 border border-white/20 w-min text-nowrap px-4 h-full flex items-center rounded-3xl',
-				className
-			)}
-		>
-			{children}
-		</div>
-	)
-}
+import { Dialog } from '@/components/ui/dialog'
 
 export function Header() {
 	return (
-		<header className='fixed top-5 z-50 w-full'>
+		<header
+			className='fixed top-0 py-2.5 bg-white z-50 w-full'
+			style={{ boxShadow: '0 4px 12px rgba(0,0,0,.02)' }}
+		>
 			<Container className='flex items-center justify-between h-[60px] max-sm:h-[50px]'>
-				<HeaderSection>
-					<h1 className='font-semibold'>Kostiantyn Ostapenko</h1>
-				</HeaderSection>
-				<HeaderSection className='max-lg:p-0'>
-					<Dialog
-						trigger={
-							<button className='lg:hidden px-4 h-full'>
-								<MenuIcon />
-							</button>
-						}
-					>
-						<HeaderMenu className='flex-col gap-20 font-medium text-lg' />
-					</Dialog>
+				<Image
+					src='/logo.svg'
+					alt='Kostiantyn Ostapenko.'
+					width={500}
+					height={30}
+					className='w-[320px] h-auto max-sm:w-[220px]'
+				/>
 
-					<nav className='max-lg:hidden'>
-						<HeaderMenu />
-					</nav>
-				</HeaderSection>
+				<HeaderMenu className='max-lg:hidden' />
+				<Dialog
+					trigger={
+						<button className='lg:hidden space-y-2 h-full px-6 max-sm:px-2 max-sm:space-y-1.5'>
+							<hr className='h-0.5 w-8 max-sm:w-5 max-sm:h-[1.5px] bg-black border-none' />
+							<hr className='h-0.5 w-8 max-sm:w-5 max-sm:h-[1.5px] bg-black border-none' />
+						</button>
+					}
+				>
+					<HeaderMenu className='flex-col gap-20 max-sm:gap-12 max-sm:text-base' />
+				</Dialog>
 			</Container>
 		</header>
 	)
