@@ -9,7 +9,7 @@ function HeaderSection({ children, className }: { children?: ReactNode; classNam
 	return (
 		<div
 			className={clsx(
-				'bg-black/50 border border-white/20 w-min text-nowrap px-4 h-full flex items-center rounded-2xl',
+				'bg-black/50 border border-white/20 w-min text-nowrap px-4 h-full flex items-center rounded-3xl',
 				className
 			)}
 		>
