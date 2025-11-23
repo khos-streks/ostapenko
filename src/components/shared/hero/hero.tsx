@@ -1,10 +1,8 @@
 import { Button } from '@/components/ui/button'
-import FloatingLines from '../../ui/particles'
-import { Container } from '../container'
 import { Typewriter } from 'nextjs-simple-typewriter'
 import { ArrowDownIcon } from 'lucide-react'
-import ColorBends from '../../ui/particles'
-import Particles from '../../ui/particles'
+import Particles from '../../ui/galaxy'
+import Galaxy from '../../ui/galaxy'
 
 export function Hero() {
 	return (
@@ -30,7 +28,7 @@ export function Hero() {
 					<br /> for startups and businesses.
 				</p>
 				<div className='flex items-center gap-4'>
-					<Button>Contact Us</Button>
+					<Button>Discuss product</Button>
 					<Button variant='secondary'>Learn more</Button>
 				</div>
 				<div className='flex flex-col items-center gap-1  text-sm text-white/50 tracking-widest absolute bottom-6 animate-pulse'>
@@ -42,38 +40,12 @@ export function Hero() {
 				</div>
 			</div>
 			<div className='absolute w-full h-full inset-0'>
-				{/* <FloatingLines
-					enabledWaves={['top', 'middle', 'bottom']}
-					lineCount={3}
-					lineDistance={50}
-					bendRadius={5.0}
-					bendStrength={-0.1}
-					interactive
-					parallax
-				/>
-				 */}
-				{/* <ColorBends
-					colors={['#ff5c7a', '#8a5cff', '#00ffd1']}
-					rotation={30}
-					speed={0.3}
-					scale={0.7}
-					frequency={2}
-					warpStrength={1.2}
-					mouseInfluence={0.1}
-					parallax={0.6}
-					noise={0.5}
-					transparent
-				/>
-				 */}
-				<Particles
-					particleColors={['#ffffff', '#ffffff']}
-					particleCount={150}
-					particleSpread={10}
-					speed={0.05}
-					particleBaseSize={100}
-					sizeRandomness={3}
-					alphaParticles={false}
-					disableRotation={false}
+				<Galaxy
+					mouseRepulsion={true}
+					density={1}
+					glowIntensity={0.1}
+					saturation={0.3}
+					hueShift={240}
 				/>
 			</div>
 		</section>

@@ -1,3 +1,4 @@
+import { Header } from '@/components/shared/header/header'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import { Toaster } from 'sonner'
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 			<body className={montserrat.className}>
 				<Provider>
 					<Toaster style={{ color: '#fff' }} />
+					<Header />
 					<main>{children}</main>
 				</Provider>
 			</body>
