@@ -15,6 +15,7 @@ const manrope = Manrope({
 const castoro = Castoro({
 	variable: '--font-castoro',
 	weight: '400',
+	subsets: ['latin'],
 	display: 'swap'
 })
 
