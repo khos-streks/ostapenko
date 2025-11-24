@@ -29,6 +29,10 @@ body {
 	}
 }
 
+.font-castoro {
+	font-family: var(--font-castoro);
+}
+
 @keyframes opacity {
 	from {
 		opacity: 0;

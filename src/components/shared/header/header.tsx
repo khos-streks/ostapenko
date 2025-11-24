@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Container } from '../container'
 import { HeaderMenu } from './header-menu'
 import { Dialog } from '@/components/ui/dialog'
+import Link from 'next/link'
 
 export function Header() {
 	return (
@@ -10,13 +11,15 @@ export function Header() {
 			style={{ boxShadow: '0 4px 12px rgba(0,0,0,.02)' }}
 		>
 			<Container className='flex items-center justify-between h-[60px] max-sm:h-[50px]'>
-				<Image
-					src='/logo.svg'
-					alt='Kostiantyn Ostapenko.'
-					width={500}
-					height={30}
-					className='w-[320px] h-auto max-sm:w-[220px]'
-				/>
+				<Link href='/'>
+					<Image
+						src='/logo.svg'
+						alt='Kostiantyn Ostapenko.'
+						width={500}
+						height={30}
+						className='w-[320px] h-auto max-sm:w-[220px]'
+					/>
+				</Link>
 
 				<HeaderMenu className='max-lg:hidden' />
 				<Dialog

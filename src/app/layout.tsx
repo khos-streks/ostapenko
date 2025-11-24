@@ -1,13 +1,20 @@
 import { Header } from '@/components/shared/header/header'
 import type { Metadata } from 'next'
-import { Manrope } from 'next/font/google'
+import { Castoro, Manrope } from 'next/font/google'
 import { Toaster } from 'sonner'
 import './globals.css'
 import Provider from './provider'
+import clsx from 'clsx'
 
 const manrope = Manrope({
 	variable: '--font-manrope',
 	subsets: ['latin'],
+	display: 'swap'
+})
+
+const castoro = Castoro({
+	variable: '--font-castoro',
+	weight: '400',
 	display: 'swap'
 })
 
@@ -24,7 +31,7 @@ export const viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang='en'>
-			<body className={manrope.className}>
+			<body className={clsx(manrope.className, castoro.variable)}>
 				<Provider>
 					<Toaster style={{ color: '#fff' }} />
 					<Header />
