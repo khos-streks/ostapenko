@@ -8,8 +8,8 @@ const buttonVariants = cva(
 		variants: {
 			variant: {
 				default:
-					'rounded-2xl bg-white text-[#09090B] hover:scale-105 w-full text-lg',
-				secondary: 'rounded-2xl backdrop-blur-md bg-white/5 text-white/50 border border-white/10 hover:text-white hover:border-white/40'
+					'rounded-2xl bg-[#121212] text-[#F7FAFC] hover:scale-105 w-full text-lg',
+				secondary: 'rounded-2xl backdrop-blur-md bg-black/5 text-black/50 border border-black/10 hover:text-black/60 hover:border-black/20 hover:bg-black/10'
 			}
 		},
 		defaultVariants: {
