@@ -4,11 +4,7 @@ export const HEADER_MENU = [
 		ariaLabel: 'Services',
 		link: '/#services'
 	},
-	{
-		label: 'Portfolio',
-		ariaLabel: 'Portfolio',
-		link: '/#portfolio'
-	},
+
 	{
 		label: 'Advantages',
 		ariaLabel: 'Advantages',
@@ -18,6 +14,11 @@ export const HEADER_MENU = [
 		label: 'Tech Stack',
 		ariaLabel: 'Tech Stack',
 		link: '/#stack'
+	},
+	{
+		label: 'Portfolio',
+		ariaLabel: 'Portfolio',
+		link: '/#portfolio'
 	},
 	{
 		label: 'Contact',

@@ -1,10 +1,10 @@
 import {
 	LayersIcon,
-	BoxIcon,
 	Link2Icon,
 	MonitorIcon,
 	CloudLightningIcon,
-	BarChart2Icon
+	BarChart2Icon,
+	DollarSignIcon
 } from 'lucide-react'
 
 export const SERVICES = [
@@ -15,10 +15,10 @@ export const SERVICES = [
 		icon: LayersIcon
 	},
 	{
-		title: 'Custom Architecture',
+		title: 'Payments Integration',
 		description:
-			'Designing scalable, maintainable, and secure SaaS platforms tailored to your business needs.',
-		icon: BoxIcon
+			'Seamlessly integrate secure payment gateways and subscription management into your SaaS.',
+		icon: DollarSignIcon
 	},
 	{
 		title: 'API & Integrations',
