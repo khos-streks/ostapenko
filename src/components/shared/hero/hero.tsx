@@ -47,8 +47,8 @@ export function Hero() {
 						that grow revenue and delight users.
 					</p>
 					<div className='w-full flex items-center justify-center gap-4 mt-10 max-sm:grid max-sm:grid-cols-2'>
-						<Button className='max-sm:px-0 max-sm:w-full'>Discuss product</Button>
-						<Button className='max-sm:px-0 max-sm:w-full' variant='secondary'>Learn more</Button>
+						<Button className='max-sm:px-0 max-sm:w-full max-sm:text-xs'>Discuss product</Button>
+						<Button className='max-sm:px-0 max-sm:w-full max-sm:text-xs' variant='secondary'>Learn more</Button>
 					</div>
 				</div>
 				<div className='pb-10 mt-auto w-full'>

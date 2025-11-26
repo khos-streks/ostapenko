@@ -1,5 +1,6 @@
 import { Hero } from '@/components/shared/hero/hero'
 import { Partners } from '@/components/shared/partners/partners'
+import { Services } from '@/components/shared/services/services'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export default function Home() {
 		<>
 			<Hero />
 			<Partners />
+			<Services />
 		</>
 	)
 }
