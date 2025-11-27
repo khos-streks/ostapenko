@@ -1,6 +1,7 @@
 import { Advantages } from '@/components/shared/advantages/advantages'
 import { Hero } from '@/components/shared/hero/hero'
 import { Partners } from '@/components/shared/partners/partners'
+import { Portfolio } from '@/components/shared/portfolio/portfolio'
 import { Services } from '@/components/shared/services/services'
 import { TechStack } from '@/components/shared/tech-stack/tech-stack'
 import { Metadata } from 'next'
@@ -19,6 +20,7 @@ export default function Home() {
 			<Services />
 			<Advantages />
 			<TechStack />
+			<Portfolio />
 		</>
 	)
 }

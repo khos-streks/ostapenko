@@ -16,9 +16,9 @@ export const HEADER_MENU = [
 		link: '/#stack'
 	},
 	{
-		label: 'Portfolio',
-		ariaLabel: 'Portfolio',
-		link: '/#portfolio'
+		label: 'Work',
+		ariaLabel: 'Work',
+		link: '/#work'
 	},
 	{
 		label: 'Contact',
