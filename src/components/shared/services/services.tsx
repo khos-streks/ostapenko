@@ -6,7 +6,7 @@ export function Services() {
 	return (
 		<section
 			id='services'
-			className='py-12'
+			className='py-12 scroll-mt-16'
 		>
 			<Container>
 				<h2 className='text-4xl font-semibold max-sm:text-xl'>What I do?</h2>

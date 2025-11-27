@@ -17,7 +17,7 @@ body {
 	background-color: #F7FAFC;
 	font-size: 18px;
 	::selection {
-		@apply bg-black/25
+		@apply bg-black/15
 	}
 }
 

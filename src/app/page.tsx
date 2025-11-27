@@ -1,3 +1,4 @@
+import { Advantages } from '@/components/shared/advantages/advantages'
 import { Hero } from '@/components/shared/hero/hero'
 import { Partners } from '@/components/shared/partners/partners'
 import { Services } from '@/components/shared/services/services'
@@ -15,6 +16,7 @@ export default function Home() {
 			<Hero />
 			<Partners />
 			<Services />
+			<Advantages />
 		</>
 	)
 }
