@@ -24,6 +24,7 @@ export function Footer() {
 					<div className='mt-4 flex items-center gap-4'>
 						{FOOTER_SOCIAL.map(({ link, node: Component }, idx) => (
 							<Link
+								target='_blank'
 								key={idx}
 								href={link}
 							>
@@ -32,7 +33,10 @@ export function Footer() {
 						))}
 					</div>
 				</div>
-				<HeaderMenu contactSource='footer' className='text-base max-md:mt-4 max-sm:flex-col max-sm:items-start max-sm:gap-4 max-sm:mt-8' />
+				<HeaderMenu
+					contactSource='footer'
+					className='text-base max-md:mt-4 max-sm:flex-col max-sm:items-start max-sm:gap-4 max-sm:mt-8'
+				/>
 			</Container>
 			<Container className='mt-4 text-black/60 text-sm'>
 				<hr className='mb-4' />© {new Date().getFullYear()} Kostiantyn. All rights reserved.
