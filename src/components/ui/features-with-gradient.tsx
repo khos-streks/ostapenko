@@ -1,5 +1,6 @@
 'use client'
 
+import clsx from 'clsx'
 import dynamic from 'next/dynamic'
 import { useId } from 'react'
 
@@ -10,10 +11,23 @@ function Component({
 	grid: { title?: string; description?: string }[]
 	gridCols?: number
 }) {
+	const gridColsClass =
+		{
+			1: 'lg:grid-cols-1',
+			2: 'lg:grid-cols-2',
+			3: 'lg:grid-cols-3',
+			4: 'lg:grid-cols-4',
+			5: 'lg:grid-cols-5',
+			6: 'lg:grid-cols-6'
+		}[gridCols] || 'lg:grid-cols-4'
+
 	return (
 		<div>
 			<div
-				className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-${gridCols} gap-10 md:gap-2`}
+				className={clsx(
+					'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-2',
+					gridColsClass
+				)}
 			>
 				{grid.map(feature => (
 					<div
