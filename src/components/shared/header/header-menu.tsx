@@ -5,8 +5,15 @@ import { useContext } from 'react'
 import { HEADER_MENU } from './header.data'
 import clsx from 'clsx'
 import UnderlineLink from '@/components/ui/underline-link'
+import { ContactUs } from '../contact/contact'
 
-export function HeaderMenu({ className }: { className?: string }) {
+export function HeaderMenu({
+	className,
+	contactSource = 'header'
+}: {
+	className?: string
+	contactSource?: 'header' | 'footer' | 'cta' | 'default'
+}) {
 	const dialogContext = useContext(DialogContext)
 	const closeDialog = dialogContext?.closeDialog
 
@@ -18,7 +25,10 @@ export function HeaderMenu({ className }: { className?: string }) {
 					onClick={closeDialog}
 				>
 					{item.function === 'contact' ? (
-						<UnderlineLink ariaLabel={item.ariaLabel}>{item.label}</UnderlineLink>
+						<ContactUs
+							source={contactSource}
+							trigger={<UnderlineLink ariaLabel={item.ariaLabel}>{item.label}</UnderlineLink>}
+						/>
 					) : (
 						<UnderlineLink
 							href={item.link}

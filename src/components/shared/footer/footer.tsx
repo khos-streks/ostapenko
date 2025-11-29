@@ -32,7 +32,7 @@ export function Footer() {
 						))}
 					</div>
 				</div>
-				<HeaderMenu className='text-base max-md:mt-4 max-sm:flex-col max-sm:items-start max-sm:gap-4 max-sm:mt-8' />
+				<HeaderMenu contactSource='footer' className='text-base max-md:mt-4 max-sm:flex-col max-sm:items-start max-sm:gap-4 max-sm:mt-8' />
 			</Container>
 			<Container className='mt-4 text-black/60 text-sm'>
 				<hr className='mb-4' />© {new Date().getFullYear()} Kostiantyn. All rights reserved.

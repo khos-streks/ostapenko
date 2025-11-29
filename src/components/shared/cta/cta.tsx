@@ -2,6 +2,7 @@ import clsx from 'clsx'
 import { Container } from '../container'
 import { Button } from '@/components/ui/button'
 import Waves from '@/components/ui/waves'
+import { ContactUs } from '../contact/contact'
 
 export function Cta() {
 	return (
@@ -34,12 +35,17 @@ export function Cta() {
 							I’m open for new projects. If you’re looking for a reliable engineer who delivers fast
 							and clean results — let’s talk.
 						</p>
-						<Button
-							type='button'
-							className='mt-8 max-sm:mt-5 max-sm:py-1.5 max-sm:px-6 mx-auto whitespace-nowrap shrink-0'
-						>
-							Contact Me
-						</Button>
+						<ContactUs
+							source='cta'
+							trigger={
+								<Button
+									type='button'
+									className='mt-8 max-sm:mt-5 max-sm:py-1.5 max-sm:px-6 mx-auto whitespace-nowrap shrink-0'
+								>
+									Contact Me
+								</Button>
+							}
+						/>
 					</div>
 				</div>
 			</Container>

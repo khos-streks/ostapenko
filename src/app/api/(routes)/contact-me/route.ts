@@ -1,45 +1,70 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { Resend } from 'resend'
-import { handleApiError } from '../../(exceptions)/handleApiError'
-import { ApiError } from '../../(exceptions)/apiError'
-import { z } from 'zod'
-import { resend } from '@/lib/resend'
+import TelegramBot from 'node-telegram-bot-api'
+import validator from 'validator'
 
-// Validation Schema
-const validationSchema = z.object({
-	email: z
-		.string({ message: 'Email must be a string' })
-		.min(1, { message: 'Email must not be empty' })
-		.email({ message: 'Email must be valid' }),
-	title: z
-		.string({ message: 'Title must be a string' })
-		.min(1, { message: 'Title must not be empty' }),
-	message: z
-		.string({ message: 'Message must be a string' })
-		.min(20, { message: 'Message must be at least 20 characters long' })
-})
+type ContactData = {
+	companyName?: string
+	email?: string
+	phone?: string
+	message?: string
+	source?: string
+	pathname?: string
+}
+
+type ContactErrors = Partial<Record<keyof ContactData, string>>
+
+const validateContactData = (contactData: ContactData): ContactErrors => {
+	const errors: ContactErrors = {}
+
+	// companyName
+	if (!contactData.companyName || contactData.companyName.trim().length === 0) {
+		errors.companyName = 'Company name is required!'
+	}
+
+	// email
+	if (!contactData.email || contactData.email.trim().length === 0) {
+		errors.companyName = 'Email is required!'
+	} else if (!validator.isEmail(contactData.email)) {
+		errors.companyName = 'Invalid email format!'
+	}
+
+	// phone
+	if (!contactData.phone || contactData.phone.trim().length === 0) {
+		errors.companyName = 'Phone number is required!'
+	} else if (!validator.isMobilePhone(contactData.phone, 'any', { strictMode: false })) {
+		errors.companyName = 'Invalid phone number format!'
+	}
+
+	return errors
+}
 
 export async function POST(req: NextRequest) {
+	if (req.method !== 'POST') {
+		return NextResponse.json({ message: 'Method not allowed' }, { status: 405 })
+	}
+
 	try {
-		// Body Validation
-		const body = await req.json()
-		const data = await validationSchema.parseAsync(body)
+		const contactData: ContactData = await req.json()
 
-		// Send email
-		await resend.emails.send({
-			from: 'My Portfolio <onboarding@resend.dev>',
-			to: [process.env.CONTACT_EMAIL ?? ''],
-			subject: `New message! ${data.title}`,
-			html: `<ul><li><b>Email:</b> ${data.email}</li><li><b>Title:</b> ${data.title}</li><li><b>Message:</b> ${data.message}</li></ul>`
-		})
+		const token = process.env.NEXT_TELEGRAM_BOT_TOKEN!
+		const chatId = process.env.NEXT_TELEGRAM_CHAT_ID!
 
-		// Response
-		return NextResponse.json({ ok: true }, { status: 200 })
-	} catch (error) {
-		if (error instanceof z.ZodError) {
-			return NextResponse.json({ message: error.issues[0].message, ok: false }, { status: 400 })
-		} else {
-			return handleApiError(error)
+		const bot = new TelegramBot(token)
+
+		const validationErrors = validateContactData(contactData)
+		if (Object.keys(validationErrors).length > 0) {
+			return NextResponse.json({ validationErrors }, { status: 400 })
 		}
+
+		await bot.sendMessage(
+			chatId,
+			`Company name: <b>${contactData.companyName}</b>\nEmail: <a target="_blank" href="mailto:${contactData.email}">${contactData.email}</a>\nPhone: <a href="tel:${contactData.phone}">${contactData.phone}</a>\nMessage: ${contactData.message}\nSource: ${contactData.source}\nPathname: ${contactData.pathname}`,
+			{ parse_mode: 'HTML' }
+		)
+
+		return NextResponse.json({ message: 'Success' })
+	} catch (err) {
+		console.log(err)
+		return NextResponse.json({ message: 'Something went wrong' }, { status: 500 })
 	}
 }

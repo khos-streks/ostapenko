@@ -119,7 +119,7 @@ function DialogContent({
 						exit='hidden'
 					>
 						<div className='w-full flex justify-between items-center mb-2'>
-							<h2 className='text-4xl max-lg:text-3xl max-md:text-2xl text-center font-black text-white mx-auto max-[450px]:text-xl'>
+							<h2 className='text-4xl max-lg:text-3xl max-md:text-2xl text-center font-black text-black mx-auto max-[450px]:text-xl'>
 								{title}
 							</h2>
 							<X
