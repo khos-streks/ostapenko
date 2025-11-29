@@ -32,7 +32,10 @@ export function Bluetongue() {
 				and full-stack implementation.
 			</p>
 
-			<FeaturesSectionWithCardGradient grid={BLUETONGUE_HIGHLIGHTS} />
+			<FeaturesSectionWithCardGradient
+				grid={BLUETONGUE_HIGHLIGHTS}
+				gridCols={4}
+			/>
 
 			<div className='mt-10 relative'>
 				<div className='relative overflow-hidden rounded-2xl '>
