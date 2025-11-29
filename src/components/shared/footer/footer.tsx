@@ -17,7 +17,7 @@ export function Footer() {
 						alt='Kostiantyn Ostapenko.'
 						width={500}
 						height={30}
-						className='w-[250px] h-auto'
+						className='h-[16px] w-auto'
 					/>
 					<span className='text-sm'>Fullstack Engineer</span>
 
