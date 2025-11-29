@@ -3,10 +3,18 @@
 import dynamic from 'next/dynamic'
 import { useId } from 'react'
 
-function Component({ grid }: { grid: { title?: string; description?: string }[] }) {
+function Component({
+	grid,
+	gridCols = 4
+}: {
+	grid: { title?: string; description?: string }[]
+	gridCols?: number
+}) {
 	return (
 		<div>
-			<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-2'>
+			<div
+				className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-${gridCols} gap-10 md:gap-2`}
+			>
 				{grid.map(feature => (
 					<div
 						key={feature.title}

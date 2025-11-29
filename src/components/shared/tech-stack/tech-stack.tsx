@@ -4,7 +4,7 @@ import { ICONS } from './tech-stack.data'
 
 export function TechStack() {
 	const left = ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Node.js', 'Express']
-	const right = ['Nest.js', 'PostgreSQL', 'Tailwind CSS', 'Git', 'AWS Integration']
+	const right = ['Nest.js', 'Prisma ORM', 'PostgreSQL', 'Tailwind CSS', 'Git', 'AWS Integration']
 
 	return (
 		<section
