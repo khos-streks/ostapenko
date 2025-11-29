@@ -5,6 +5,7 @@ import { Toaster } from 'sonner'
 import './globals.css'
 import Provider from './provider'
 import clsx from 'clsx'
+import { Footer } from '@/components/shared/footer/footer'
 
 const manrope = Manrope({
 	variable: '--font-manrope',
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 					<Toaster style={{ color: '#fff' }} />
 					<Header />
 					<main>{children}</main>
+					<Footer />
 				</Provider>
 			</body>
 		</html>
