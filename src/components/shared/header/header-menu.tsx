@@ -22,7 +22,7 @@ export function HeaderMenu({
 			{HEADER_MENU.map((item, idx) => (
 				<li
 					key={idx}
-					onClick={closeDialog}
+					onClick={item.function !== 'contact' ? closeDialog : () => {}}
 				>
 					{item.function === 'contact' ? (
 						<ContactUs
