@@ -1,11 +1,11 @@
 import { Header } from '@/components/shared/header/header'
-import type { Metadata } from 'next'
 import { Castoro, Manrope } from 'next/font/google'
 import { Toaster } from 'sonner'
 import './globals.css'
 import Provider from './provider'
 import clsx from 'clsx'
 import { Footer } from '@/components/shared/footer/footer'
+import { generateMeta } from '@/utils/generateMeta'
 
 const manrope = Manrope({
 	variable: '--font-manrope',
@@ -20,10 +20,12 @@ const castoro = Castoro({
 	display: 'swap'
 })
 
-export const metadata: Metadata = {
-	title: 'Ostapenko Kostiantyn',
-	description:
-		'Professional web development services for businesses worldwide. Offering custom SaaS solutions, AI-powered applications, and seamless e-commerce integrations. Helping companies scale efficiently with tailored, high-performance websites. Contact us for expert web development and optimization.'
+export async function generateMetadata() {
+	return await generateMeta({
+		title: 'Kostiantyn Ostapenko',
+		description:
+			'Full-stack engineer specializing in scalable SaaS development. I build fast, reliable, user-focused applications with clean architecture, solid engineering practices, and seamless delivery.'
+	})
 }
 
 export const viewport = {

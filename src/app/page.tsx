@@ -5,12 +5,14 @@ import { Partners } from '@/components/shared/partners/partners'
 import { Portfolio } from '@/components/shared/portfolio/portfolio'
 import { Services } from '@/components/shared/services/services'
 import { TechStack } from '@/components/shared/tech-stack/tech-stack'
-import { Metadata } from 'next'
+import { generateMeta } from '@/utils/generateMeta'
 
-export const metadata: Metadata = {
-	title: 'Ostapenko Kostiantyn',
-	description:
-		'Professional web development services for businesses worldwide. Offering custom SaaS solutions, AI-powered applications, and seamless e-commerce integrations. Helping companies scale efficiently with tailored, high-performance websites. Contact us for expert web development and optimization.'
+export async function generateMetadata() {
+	return await generateMeta({
+		title: 'Kostiantyn Ostapenko',
+		description:
+			'Full-stack engineer specializing in scalable SaaS development. I build fast, reliable, user-focused applications with clean architecture, solid engineering practices, and seamless delivery.'
+	})
 }
 
 export default function Home() {
