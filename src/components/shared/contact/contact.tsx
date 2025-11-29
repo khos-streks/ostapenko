@@ -82,7 +82,12 @@ export function ContactUs({
 					disabled={isPending}
 					className='mt-4 w-[200px] flex items-center gap-2 justify-center disabled:opacity-35'
 				>
-					{isPending && <LoaderIcon size={16} className='animate-spin' />}
+					{isPending && (
+						<LoaderIcon
+							size={16}
+							className='animate-spin'
+						/>
+					)}
 					Send
 				</Button>
 			</form>

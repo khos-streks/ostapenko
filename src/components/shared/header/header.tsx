@@ -25,8 +25,8 @@ export function Header() {
 				<Dialog
 					trigger={
 						<button className='lg:hidden space-y-2 h-full px-6 max-sm:px-2 max-sm:space-y-1.5'>
-							<hr className='h-0.5 w-8 max-sm:w-5 max-sm:h-[1.5px] bg-black border-none' />
-							<hr className='h-0.5 w-8 max-sm:w-5 max-sm:h-[1.5px] bg-black border-none' />
+							<hr className='w-8 max-sm:w-5 border-black border' />
+							<hr className='w-8 max-sm:w-5 border-black border' />
 						</button>
 					}
 				>

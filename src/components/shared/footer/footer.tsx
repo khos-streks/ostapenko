@@ -11,7 +11,7 @@ export function Footer() {
 			style={{ boxShadow: '0 4px 12px rgba(0,0,0,.02)' }}
 		>
 			<Container className='flex items-start justify-between max-md:flex-col max-md:justify-start'>
-				<div className='flex flex-col gap-1.5'>
+				<div className='flex flex-col items-start gap-1.5'>
 					<Image
 						src='/logo.svg'
 						alt='Kostiantyn Ostapenko.'
