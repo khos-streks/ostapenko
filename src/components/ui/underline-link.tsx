@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 
 interface UnderlineLinkProps {
-	href: string
+	href?: string
+	onClick?: () => void
 	children: ReactNode
 	className?: string
 	ariaLabel?: string
@@ -11,13 +12,15 @@ interface UnderlineLinkProps {
 
 export default function UnderlineLink({
 	href,
+	onClick,
 	children,
 	className = '',
 	ariaLabel
 }: UnderlineLinkProps) {
 	return (
 		<Link
-			href={href}
+			onClick={onClick ?? (() => {})}
+			href={href ?? '#'}
 			aria-label={ariaLabel}
 			className={clsx('relative group inline-block', className)}
 		>

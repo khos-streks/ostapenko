@@ -4,6 +4,7 @@ import { Typewriter } from 'nextjs-simple-typewriter'
 import { Container } from '../container'
 import Waves from '@/components/ui/waves'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 export function Hero() {
 	return (
@@ -48,7 +49,14 @@ export function Hero() {
 					</p>
 					<div className='w-full flex items-center justify-center gap-4 mt-10 max-sm:grid max-sm:grid-cols-2'>
 						<Button className='max-sm:px-0 max-sm:w-full max-sm:text-xs'>Discuss product</Button>
-						<Button className='max-sm:px-0 max-sm:w-full max-sm:text-xs' variant='secondary'>Learn more</Button>
+						<Link href='/#services'>
+							<Button
+								className='max-sm:px-0 max-sm:w-full max-sm:text-xs'
+								variant='secondary'
+							>
+								Learn more
+							</Button>
+						</Link>
 					</div>
 				</div>
 				<div className='pb-10 mt-auto w-full'>

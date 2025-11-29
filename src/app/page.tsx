@@ -1,4 +1,5 @@
 import { Advantages } from '@/components/shared/advantages/advantages'
+import { Cta } from '@/components/shared/cta/cta'
 import { Hero } from '@/components/shared/hero/hero'
 import { Partners } from '@/components/shared/partners/partners'
 import { Portfolio } from '@/components/shared/portfolio/portfolio'
@@ -21,6 +22,7 @@ export default function Home() {
 			<Advantages />
 			<TechStack />
 			<Portfolio />
+			<Cta />
 		</>
 	)
 }

@@ -23,6 +23,6 @@ export const HEADER_MENU = [
 	{
 		label: 'Contact',
 		ariaLabel: 'Contact',
-		link: '/#contact'
+		function: "contact"
 	}
 ]
